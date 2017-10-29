@@ -1,0 +1,54 @@
+@mixin menu-expanding-lines($config: ()) {
+    $config: extend((
+        color: $grey,
+        link-color: $elr-blue,
+        line-thickness: 1px
+    ), $config);
+
+    $color: map-get($config, color);
+    $link-color: map-get($config, link-color);
+    $line-thickness: map-get($config, line-thickness);
+
+    a {
+        position: relative;
+        display: block;
+        margin: 0 1.5em;
+        padding: .75em 0;
+        text-align: center;
+        color: $color;
+        transition: color .3s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: $line-thickness;
+            background: $link-color;
+            transform: scale3d(0, 1, 1);
+            transition: transform .1s;
+        }
+
+        &:hover,
+        &:focus {
+            color: $link-color;
+
+            &::before {
+                transform: scale3d(1, 1, 1);
+                transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+                transition-duration: .3s;
+            }
+        }
+    }
+
+    .menu-item.current a {
+        color: $link-color;
+
+        &::before {
+            transform: scale3d(1, 1, 1);
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .3s;
+        }
+    }
+}

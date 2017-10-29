@@ -1,0 +1,47 @@
+@mixin menu-animated($config: ()) {
+    $config: extend((
+        font-size: 16px,
+        color: $link-color
+    ), $config);
+
+    $font-size: map-get($config, font-size);
+    $color: map-get($config, color);
+
+    line-height: 1;
+    margin: 0 auto to-rems(20px);
+
+    .menu {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include elr-breakpoint($config: (point: 'neptune')) {
+            flex-direction: column;
+        }
+    }
+
+    .menu-item {
+        display: block;
+        margin: 0;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    a {
+        font-size: $font-size;
+        font-weight: $bold;
+        display: block;
+        padding: $font-size;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none;
+        color: $color;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}

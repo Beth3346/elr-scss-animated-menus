@@ -1,0 +1,54 @@
+@mixin menu-drop-lines($config: ()) {
+    $config: extend((
+        color: $grey,
+        link-color: $elr-blue,
+        line-thickness: 1px
+    ), $config);
+
+    $color: map-get($config, color);
+    $link-color: map-get($config, link-color);
+    $line-thickness: map-get($config, line-thickness);
+
+    a {
+        margin: 0 1.5em;
+        padding: .75em 0;
+        text-align: center;
+        position: relative;
+        color: $color;
+        transition: color .3s;
+
+        &:hover {
+            color: $link-color;
+        }
+
+        &::after {
+            position: absolute;
+            top: 100%;
+            left: 5%;
+            width: 90%;
+            height: $line-thickness;
+            background: $link-color;
+            content: '';
+            opacity: 0;
+            transition: height .3s, opacity .3s, transform .3s;
+            transform: translateY(-10px);
+        }
+
+        &:hover::after,
+        &:focus::after {
+            height: $line-thickness;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .menu-item.current a {
+        color: $link-color;
+
+        &::after {
+            height: $line-thickness;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
