@@ -6,9 +6,7 @@
 
 a library of sass mixins
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/WQoMZ89hEDJBYaUN6DNr2Xrq/Beth3346/elr-scss-animated-menus'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/WQoMZ89hEDJBYaUN6DNr2Xrq/Beth3346/elr-scss-animated-menus.svg' />
-</a>
+
 
 ## Installation
 
