@@ -1,6 +1,6 @@
 @mixin menu-drop-lines($config: ()) {
   $config:extend(
-    (color: #666, link-color: #1976d2, line-thickness: 1px),
+    (color: #999, link-color: #1976d2, line-thickness: 1px),
     $config
   );
 
