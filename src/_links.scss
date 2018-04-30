@@ -4,8 +4,29 @@
   $font-size: map-get($config, font-size);
   $color: map-get($config, color);
 
-  line-height: 1;
-  margin: 0 auto 20px;
+  & * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 0 auto;
+
+    ::before,
+    ::after {
+      box-sizing: border-box;
+    }
+  }
 
   .menu {
     position: relative;
