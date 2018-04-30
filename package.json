@@ -24,7 +24,7 @@
   },
   "homepage": "http://www.elizabeth-rogers.com/elr-utilities/css.html",
   "keywords": [
-    "sass, css, mixins, accordion"
+    "sass, css, mixins, menu, navigation"
   ],
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "/src/_main.scss",
