@@ -1,97 +1,96 @@
 @mixin menu-simple-lines($config: ()) {
-    $config: extend((
-        color: $grey,
-        line-color: $elr-blue,
-        line-thickness: 1px
-    ), $config);
+  $config:extend(
+    (color: #999, line-color: #1976d2, line-thickness: 1px),
+    $config
+  );
 
-    $color: map-get($config, color);
-    $line-color: map-get($config, line-color);
-    $line-thickness: map-get($config, line-thickness);
+  $color: map-get($config, color);
+  $line-color: map-get($config, line-color);
+  $line-thickness: map-get($config, line-thickness);
+
+  a {
+    width: 120px;
+    height: auto;
+    text-align: center;
+    transition: color 0.3s;
+  }
+
+  .menu-item {
+    margin: 0;
 
     a {
-        width: to-rems(120px);
-        height: to-rems(48px);
-        text-align: center;
-        transition: color .3s;
+      color: $color;
+
+      &:hover,
+      &:focus {
+        color: $line-color;
+      }
     }
 
-    .menu-item {
-        margin: 0;
-
-        a {
-            color: $color;
-
-            &:hover,
-            &:focus {
-                color: $line-color;
-            }
-        }
-
-        &.current a {
-            color: $line-color;
-            transition: color .5s;
-        }
+    &.current a {
+      color: $line-color;
+      transition: color 0.5s;
     }
+  }
 
+  .menu-line {
+    position: absolute;
+    top: 100%;
+    // left: -30px;
+    width: 120px;
+    height: $line-thickness;
+    pointer-events: none;
+    border: $line-thickness solid #fff;
+    border-width: 0 45px;
+    background-color: $line-color;
+    transition: transform 0.5s;
+    padding: 0;
+    transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+  }
+
+  .menu-item:nth-child(1).current ~ .menu-line {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .menu-item:nth-child(2).current ~ .menu-line {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  .menu-item:nth-child(3).current ~ .menu-line {
+    transform: translate3d(200%, 0, 0);
+  }
+
+  .menu-item:nth-child(4).current ~ .menu-line {
+    transform: translate3d(300%, 0, 0);
+  }
+
+  .menu-item:nth-child(5).current ~ .menu-line {
+    transform: translate3d(400%, 0, 0);
+  }
+
+  @media (max-width: 568px) {
     .menu-line {
-        position: absolute;
-        top: 100%;
-        // left: -30px;
-        width: to-rems(120px);
-        height: $line-thickness;
-        pointer-events: none;
-        border: $line-thickness solid $white;
-        border-width: 0 45px;
-        background-color: $line-color;
-        transition: transform .5s;
-        padding: 0;
-        transition-timing-function: cubic-bezier(1, .01, 0, 1.22);
+      top: 3em;
     }
 
     .menu-item:nth-child(1).current ~ .menu-line {
-        transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
 
     .menu-item:nth-child(2).current ~ .menu-line {
-        transform: translate3d(100%, 0, 0);
+      transform: translate3d(0, 3em, 0);
     }
 
     .menu-item:nth-child(3).current ~ .menu-line {
-        transform: translate3d(200%, 0, 0);
+      transform: translate3d(0, 6em, 0);
     }
 
     .menu-item:nth-child(4).current ~ .menu-line {
-        transform: translate3d(300%, 0, 0);
+      transform: translate3d(0, 9em, 0);
     }
 
     .menu-item:nth-child(5).current ~ .menu-line {
-        transform: translate3d(400%, 0, 0);
+      transform: translate3d(0, 12em, 0);
     }
-
-    @include elr-breakpoint($config:(point: 'neptune')) {
-        .menu-line {
-            top: 3em;
-        }
-
-        .menu-item:nth-child(1).current ~ .menu-line {
-            transform: translate3d(0, 0, 0);
-        }
-
-        .menu-item:nth-child(2).current ~ .menu-line {
-            transform: translate3d(0, 3em, 0);
-        }
-
-        .menu-item:nth-child(3).current ~ .menu-line {
-            transform: translate3d(0, 6em, 0);
-        }
-
-        .menu-item:nth-child(4).current ~ .menu-line {
-            transform: translate3d(0, 9em, 0);
-        }
-
-        .menu-item:nth-child(5).current ~ .menu-line {
-            transform: translate3d(0, 12em, 0);
-        }
-    }
+  }
 }

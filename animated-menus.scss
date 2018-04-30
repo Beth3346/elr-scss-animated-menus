@@ -1,0 +1,9 @@
+@import 'src/main';
+
+.menu-animated {
+  @include menu-animated();
+}
+
+.menu-simple-lines {
+  @include menu-simple-lines();
+}
