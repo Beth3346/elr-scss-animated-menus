@@ -16,13 +16,15 @@
 
   margin-bottom: 0;
 
-  a {
+  .menu .menu-item .menu-item-button {
     position: relative;
     display: block;
     margin: 0 1em;
     text-align: center;
     color: $color;
     transition: color 0.4s;
+    padding-left: 13px;
+    padding-right: 13px;
 
     &:hover,
     &:focus {
@@ -52,7 +54,7 @@
     }
   }
 
-  .menu-item.current a {
+  .menu-item.current .menu-item-button {
     color: $link-color;
 
     &::before,

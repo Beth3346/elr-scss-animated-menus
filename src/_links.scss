@@ -45,28 +45,29 @@
     @media (max-width: 568px) {
       flex-direction: column;
     }
-  }
 
-  .menu-item {
-    display: block;
-    margin: 0;
-    margin-left: 0;
-    padding: 0;
-  }
+    .menu-item {
+      display: block;
+      margin: 0;
+      margin-left: 0;
+      padding: 0;
 
-  a {
-    font-size: $font-size;
-    font-weight: 700;
-    display: block;
-    padding: $font-size;
-    cursor: pointer;
-    user-select: none;
-    text-decoration: none;
-    color: $color;
-    height: auto;
+      .menu-item-button {
+        margin: 0;
+        font-size: $font-size;
+        font-weight: 700;
+        display: block;
+        padding: 10px $font-size;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none;
+        color: $color;
+        height: auto;
 
-    &:focus {
-      outline: 0;
+        &:focus {
+          outline: 0;
+        }
+      }
     }
   }
 }

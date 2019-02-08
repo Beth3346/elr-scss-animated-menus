@@ -14,28 +14,27 @@
   $line-color: map-get($config, line-color);
   $line-thickness: map-get($config, line-thickness);
 
-  a {
-    width: 120px;
-    height: auto;
-    text-align: center;
-    transition: color 0.3s;
-  }
+  .menu {
+    .menu-item {
+      margin: 0;
 
-  .menu-item {
-    margin: 0;
+      .menu-item-button {
+        color: $color;
+        width: 120px;
+        height: auto;
+        text-align: center;
+        transition: color 0.3s;
 
-    a {
-      color: $color;
-
-      &:hover,
-      &:focus {
-        color: $line-color;
+        &:hover,
+        &:focus {
+          color: $line-color;
+        }
       }
-    }
 
-    &.current a {
-      color: $line-color;
-      transition: color 0.5s;
+      &.current .menu-item-button {
+        color: $line-color;
+        transition: color 0.5s;
+      }
     }
   }
 

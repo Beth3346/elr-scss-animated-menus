@@ -14,7 +14,7 @@
   $link-color: map-get($config, link-color);
   $line-thickness: map-get($config, line-thickness);
 
-  a {
+  .menu .menu-item .menu-item-button {
     margin: 0 1.5em;
     padding: 0.75em 0;
     text-align: center;
@@ -29,8 +29,8 @@
     &::after {
       position: absolute;
       top: 100%;
-      left: 5%;
-      width: 90%;
+      left: 20%;
+      width: 60%;
       height: $line-thickness;
       background: $link-color;
       content: '';
@@ -47,7 +47,7 @@
     }
   }
 
-  .menu-item.current a {
+  .menu .menu-item.current .menu-item-button {
     color: $link-color;
 
     &::after {
