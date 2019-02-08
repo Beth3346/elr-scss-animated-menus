@@ -72,20 +72,20 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: '';
 }
 
-/* remember to define focus styles! */
+// remember to define focus styles!
 :focus {
   outline: 0;
   text-decoration: none;
 }
 
-/* remember to highlight inserts somehow! */
+// remember to highlight inserts somehow!
 ins {
   text-decoration: none;
 }
@@ -98,12 +98,12 @@ del {
   text-decoration: line-through;
 }
 
-/* set img max-width */
+// set img max-width
 img {
   height: auto;
 }
 
-/* ie 8 img max-width */
+// ie 8 img max-width
 @media \0screen {
   img {
     width: auto;
@@ -118,7 +118,7 @@ body {
   background-color: #fff;
 }
 
-/* add html5 compatibilty */
+// add html5 compatibilty
 
 main,
 article,

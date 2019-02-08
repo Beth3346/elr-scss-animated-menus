@@ -1,6 +1,12 @@
+@import 'node_modules/elr-scss-functions/main';
+
 @mixin menu-simple-lines($config: ()) {
-  $config:extend(
-    (color: #999, line-color: #1976d2, line-thickness: 1px),
+  $config: extend(
+    (
+      color: #999,
+      line-color: #1976d2,
+      line-thickness: 1px
+    ),
     $config
   );
 
