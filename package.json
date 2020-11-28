@@ -20,7 +20,7 @@
     "node-sass": "^5.0.0",
     "path": "^0.12.7"
   },
-  "homepage": "",
+  "homepage": "https://elr-animated-menus.netlify.app/",
   "keywords": [
     "sass, css, mixins, menu, navigation"
   ],
