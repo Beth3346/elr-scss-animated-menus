@@ -1,11 +1,9 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin menu-double-lines($config: ()) {
   $config: extend(
     (
       color: #999,
       link-color: #1976d2,
-      line-thickness: 1px
+      line-thickness: 1px,
     ),
     $config
   );
@@ -33,7 +31,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       width: 100%;

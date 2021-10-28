@@ -1,11 +1,9 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin menu-expanding-lines($config: ()) {
   $config: extend(
     (
       color: #999,
       link-color: #1976d2,
-      line-thickness: 1px
+      line-thickness: 1px,
     ),
     $config
   );
@@ -24,7 +22,7 @@
     transition: color 0.3s;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;

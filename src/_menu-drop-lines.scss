@@ -1,11 +1,9 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin menu-drop-lines($config: ()) {
   $config: extend(
     (
       color: #999,
       link-color: #1976d2,
-      line-thickness: 1px
+      line-thickness: 1px,
     ),
     $config
   );
@@ -33,7 +31,7 @@
       width: 60%;
       height: $line-thickness;
       background: $link-color;
-      content: '';
+      content: "";
       opacity: 0;
       transition: height 0.3s, opacity 0.3s, transform 0.3s;
       transform: translateY(-10px);
