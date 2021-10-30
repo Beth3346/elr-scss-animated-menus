@@ -1,6 +1,5 @@
 # elr-scss-animated-menus
 
-[![Build Status](https://travis-ci.org/Beth3346/elr-scss-animated-menus.svg?branch=master)](https://travis-ci.org/Beth3346/elr-scss-animated-menus)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-animated-menus.svg?style=flat)]()
 
