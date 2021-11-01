@@ -38,7 +38,7 @@
     "url": "https://github.com/Beth3346/elr-scss-animated-menus.git"
   },
   "dependencies": {
-    "elr-scss-animations": "0.0.8",
+    "elr-scss-animations": "0.0.9",
     "elr-scss-functions": "1.1.6"
   },
   "browserslist": [

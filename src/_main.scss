@@ -1,7 +1,7 @@
-@import "node_modules/elr-scss-functions/src/main";
+@import "elr-scss-functions/src/main";
 
-@import "src/links";
-@import "src/menu-double-lines";
-@import "src/menu-drop-lines";
-@import "src/menu-expanding-lines";
-@import "src/menu-simple-lines";
+@import "./links";
+@import "./menu-double-lines";
+@import "./menu-drop-lines";
+@import "./menu-expanding-lines";
+@import "./menu-simple-lines";
