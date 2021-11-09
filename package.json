@@ -10,7 +10,7 @@
   "scripts": {
     "build": "gulp clean && gulp",
     "prepare": "husky install",
-    "test": "gulp clean && gulp && gulp clean",
+    "test": "gulp clean && gulp",
     "update": "ncu",
     "update:install": "ncu -u && npm install",
     "publish": "np"
@@ -22,9 +22,9 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.0.0",
-    "husky": "^7.0.0",
+    "husky": "^7.0.4",
     "np": "^7.5.0",
-    "npm-check-updates": "^11.8.5",
+    "npm-check-updates": "^12.0.2",
     "sass": "^1.43.4"
   },
   "homepage": "https://elr-animated-menus.netlify.app/",
@@ -38,7 +38,7 @@
     "url": "https://github.com/Beth3346/elr-scss-animated-menus.git"
   },
   "dependencies": {
-    "elr-scss-animations": "0.0.9",
+    "elr-scss-animations": "0.0.10",
     "elr-scss-functions": "1.1.6"
   },
   "browserslist": [
