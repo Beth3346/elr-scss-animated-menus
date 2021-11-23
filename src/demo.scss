@@ -1,5 +1,6 @@
 @import "src/main";
 @import "elr-scss-reset/src/main";
+@import "elr-scss-config/src/main";
 
 @include elr-reset;
 
@@ -16,7 +17,7 @@
 .main-heading {
   font-size: 36px;
   font-weight: 700;
-  border-bottom: 1px solid #ccc;
+  border-bottom: $border;
   padding-bottom: 5px;
   margin-bottom: 10px;
   width: 100%;
@@ -36,21 +37,21 @@
 }
 
 .menu-animated {
-  @include menu-animated();
+  @include menu-animated;
 }
 
 .menu-simple-lines {
-  @include menu-simple-lines();
+  @include menu-simple-lines;
 }
 
 .menu-double-lines {
-  @include menu-double-lines();
+  @include menu-double-lines;
 }
 
 .menu-drop-lines {
-  @include menu-drop-lines();
+  @include menu-drop-lines;
 }
 
 .menu-expanding-lines {
-  @include menu-expanding-lines();
+  @include menu-expanding-lines;
 }
