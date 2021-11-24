@@ -1,7 +1,7 @@
 # elr-scss-animated-menus
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm](https://img.shields.io/npm/dm/elr-scss-animated-menus.svg?style=flat)]()
+[![npm](https://img.shields.io/npm/dm/elr-scss-animated-menus.svg?style=flat)](https://npmjs.com/package/elr-scss-animated-menus)
 
 a library of sass mixins
 
