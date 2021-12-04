@@ -21,7 +21,9 @@
     "np": "^7.6.0",
     "npm-check-updates": "^12.0.2",
     "parcel": "^2.0.1",
-    "sass": "^1.44.0"
+    "sass": "^1.44.0",
+    "elr-scss-base": "^0.0.9",
+    "elr-scss-reset": "^0.0.8"
   },
   "homepage": "https://elr-animated-menus.netlify.app/",
   "keywords": [
@@ -34,10 +36,8 @@
   },
   "dependencies": {
     "elr-scss-animations": "0.0.13",
-    "elr-scss-base": "^0.0.9",
     "elr-scss-config": "^1.1.2",
-    "elr-scss-functions": "1.1.6",
-    "elr-scss-reset": "^0.0.8"
+    "elr-scss-functions": "1.1.6"
   },
   "np": {
     "yarn": false,
