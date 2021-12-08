@@ -1,5 +1,7 @@
-# elr-scss-animated-menus
+# Animated Menus
 
+[![npm version](http://img.shields.io/npm/v/elr-scss-animated-menus.svg)](https://www.npmjs.org/package/elr-scss-animated-menus)
+[![Build Status](https://github.com/elr-scss-animated-menus/workflows/CI/badge.svg)](https://github.com/elr-scss-animated-menus/actions?workflow=CI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-animated-menus.svg?style=flat)](https://npmjs.com/package/elr-scss-animated-menus)
 
@@ -11,6 +13,12 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 
 ```sh
 npm install elr-scss-animated-menus --save
+```
+
+or
+
+```sh
+yarn add elr-scss-animated-menus
 ```
 
 ## Implementation
