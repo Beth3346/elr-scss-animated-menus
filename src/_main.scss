@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import "elr-scss-functions/src/main";
 @import "elr-scss-config/src/main";
 
@@ -58,12 +59,17 @@
         font-size: $font-size;
         font-weight: 700;
         display: block;
-        padding: 10px $font-size;
+        padding: 10px math.div($font-size, 2);
         cursor: pointer;
         user-select: none;
         text-decoration: none;
         color: $color;
         height: auto;
+        background: transparent;
+
+        &:hover {
+          background: transparent;
+        }
 
         &:focus {
           outline: 0;
@@ -76,6 +82,7 @@
 @mixin menu-double-lines($config: ()) {
   $config: extend(
     (
+      font-size: $base-fontsize,
       color: $gray,
       link-color: $primary-color,
       line-thickness: 1px,
@@ -83,6 +90,7 @@
     $config
   );
 
+  $font-size: map-get($config, font-size);
   $color: map-get($config, color);
   $link-color: map-get($config, link-color);
   $line-thickness: map-get($config, line-thickness);
@@ -96,8 +104,8 @@
     text-align: center;
     color: $color;
     transition: color 0.4s;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding-left: math.div($font-size, 2);
+    padding-right: math.div($font-size, 2);
 
     &:hover,
     &:focus {
@@ -261,11 +269,13 @@
       color: #999,
       line-color: $primary-color,
       line-thickness: 1px,
+      width: 100px,
     ),
     $config
   );
 
   $color: map-get($config, color);
+  $width: map-get($config, width);
   $line-color: map-get($config, line-color);
   $line-thickness: map-get($config, line-thickness);
 
@@ -275,7 +285,7 @@
 
       .menu-item-button {
         color: $color;
-        width: 120px;
+        width: $width;
         height: auto;
         text-align: center;
         transition: color 0.3s;
@@ -296,12 +306,12 @@
   .menu-line {
     position: absolute;
     top: 100%;
-    // left: -30px;
-    width: 120px;
+    // left: -37px;
+    width: $width;
     height: $line-thickness;
     pointer-events: none;
     border: $line-thickness solid #fff;
-    border-width: 0 45px;
+    border-width: 0 math.div($width, 3);
     background-color: $line-color;
     transition: transform 0.5s;
     padding: 0;
